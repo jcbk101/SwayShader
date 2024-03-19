@@ -1,0 +1,24 @@
+local debugdraw = require "debug-draw.debug-draw"
+
+function init(self)
+	self.dt = 0
+	self.pos = go.get_position()
+	self.size = go.get("#sprite","size")
+	
+	local base = self.pos.y - (self.size.y * 0.5)
+	-- Shift to max level that can shift
+	base = base + (self.size.y * .25)	
+--	print(base)
+	
+	go.set("#sprite", "speed.x", 1.0)
+	go.set("#sprite", "distance.x", 20.0)	
+	go.set("#sprite", "base.x", base)
+end
+
+
+function fixed_update(self, dt)
+	self.dt = self.dt + dt
+	go.set("#sprite", "time.x", self.dt)
+	-- Debug purposes
+	debugdraw.box(self.pos.x, self.pos.y, self.size.x, self.size.y, "red")
+end
