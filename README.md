@@ -1,8 +1,7 @@
 # Welcome to Defold
 
-This project was created from the "empty" project template.
-
-The settings in ["game.project"](defold://open?path=/game.project) are all the default. A bootstrap empty ["main.collection"](defold://open?path=/main/main.collection) is included.
+## Content
+Defold project demonstrating a way to add object swaing using a shader and Position data instead of UV data.
 
 Check out [the documentation pages](https://defold.com/learn) for examples, tutorials, manuals and API docs.
 
